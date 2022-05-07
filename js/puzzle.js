@@ -93,11 +93,19 @@ function implementLogic() {
 
     $(".draggablePiece").draggable({
         revert: "invalid",
+        start: function () {
+            if($(this).hasClass("droppedPiece"))
+            {
+                $(this).removeClass("droppedPiece")
+                $(this).parent().removeClass("piecePresent")
+            }
+        }
     });
     $(".droppableSpace").droppable({
         hoverClass: "ui-state-highlight",
         accept:function (draggable) {
-            return (!$(this).hasClass("piecePresent") || $(this).data("dropped") && $(this).data("dropped").is(draggable))
+            // return (!$(this).hasClass("piecePresent") || $(this).data("dropped") && $(this).data("dropped").is(draggable))
+            return (!$(this).hasClass("piecePresent"))
         },
         drop:function (event, ui) {
             moves++;
@@ -129,6 +137,7 @@ function implementLogic() {
                 let audio = new Audio('./sound/wrong.mp3')
                 if (!muted)
                     audio.play();
+
 
             }
             checkIfPuzzleSolved();
