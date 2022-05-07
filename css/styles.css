@@ -1,0 +1,113 @@
+#container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#pieceContainer {
+    width: 408px;
+    height: 408px;
+    border: 1px solid black;
+    float: left;
+    text-align: center;
+    font-size: 30px;
+    line-height: 400px;
+    position: relative;
+}
+
+#puzzleContainer {
+    width: 408px;
+    height: 408px;
+    border: 1px solid black;
+    float: right;
+    /*position: relative;*/
+}
+
+#utilitiesContainer {
+
+}
+
+#utilitiesUpperContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#timeContainer  {
+    display: flex;
+    font-size: 30px;
+}
+
+#muteContainer {
+    position: absolute;
+
+
+}
+
+#imageContainer {
+    border: 1px solid black;
+    width: 408px;
+    height: 408px;
+    display: flex;
+}
+
+#imageContainer img {
+    object-fit: fill;
+    width: 398px;
+    height: 398px;
+    padding: 5px;
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+ul button {
+    width: 100px;
+    border: 1px solid black;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+#btnReset {
+    display: none;
+    margin-right: 85px;
+}
+#btnStart {
+    margin-right: 85px;
+}
+
+#btnMute {
+    background: url("../img/Sound.png") no-repeat;
+    background-size:cover;
+    width: 25px;
+    height: 25px;
+    float: left;
+    border: none;
+    cursor: pointer;
+    /*outline: none;*/
+}
+
+.piece {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+
+    float: left;
+    background-image: url("../img/Fish.jpeg");
+    /*filter: opacity(65%);*/
+    background-repeat: no-repeat;
+    background-size: 400px 400px;
+}
+.ui-state-highlight{
+
+}
+
+
